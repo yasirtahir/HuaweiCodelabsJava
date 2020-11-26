@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/upsdk_margin_l"
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtLblApp"
+            style="@style/TextViewStyle"
+            android:gravity="start"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/app_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnAccountKit"
+            android:text="@string/account_kit_demo"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_below="@+id/txtLblApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSendCustomEvent"
+            android:text="@string/send_custom_event"
+            android:layout_below="@+id/btnAccountKit"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnLocationKit"
+            android:text="@string/location_kit_demo"
+            android:layout_below="@+id/btnSendCustomEvent"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnMapKit"
+            android:text="@string/map_kit"
+            android:layout_below="@+id/btnLocationKit"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnAppLinking"
+            android:text="@string/applinking_kit"
+            android:layout_below="@+id/btnMapKit"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSafetyDetect"
+            android:text="@string/safety_detect"
+            android:layout_below="@+id/btnAppLinking"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnAds"
+            android:text="@string/ad_kit"
+            android:layout_below="@+id/btnSafetyDetect"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnMlKit"
+            android:text="@string/ml_kit"
+            android:layout_below="@+id/btnAds"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnGeneratePushToken"
+            android:text="@string/generate_push_token"
+            android:layout_below="@+id/btnMlKit"
+            android:layout_margin="@dimen/field_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtPushToken"
+            style="@style/TextViewStyle"
+            android:layout_marginTop="@dimen/field_padding_left"
+            android:gravity="start"
+            android:scrollbars = "vertical"
+            android:layout_below="@+id/btnGeneratePushToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</ScrollView>

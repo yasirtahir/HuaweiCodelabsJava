@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/upsdk_margin_l"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtGeneralCardRecog"
+        style="@style/TextViewStyle"
+        android:text="@string/general_card_recognition"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_below="@+id/txtGeneralCardRecog"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/detect_from_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_below="@+id/btnCamera"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/detect_from_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

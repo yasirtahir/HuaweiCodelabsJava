@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/upsdk_margin_l"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtViewTitle"
+        style="@style/TextViewStyle"
+        android:text="@string/huawei_account_kit"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnTokenSignIn"
+        android:layout_below="@+id/txtViewTitle"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/id_token_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnAuthorizationSignIn"
+        android:layout_below="@+id/btnTokenSignIn"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/authorization_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_below="@+id/btnAuthorizationSignIn"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtLogs"
+        style="@style/TextViewStyle"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:gravity="start"
+        android:scrollbars = "vertical"
+        android:layout_below="@+id/btnSignOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+apply plugin: 'com.android.application'
+// Applying Huawei Plugin
+apply plugin: 'com.huawei.agconnect'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.yasir.huaweicodelabs"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 100
+        versionName "1.0.0"
+        resConfigs "en" // Limiting the resource files to English only
+        ndk.abiFilters 'arm64-v8a', 'x86_64' // Removing unused binary files of 32-bit arch.
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('codelabs.jks')
+            keyAlias 'codelabkey'
+            keyPassword 'Software#123#'
+            storePassword 'Software#123#'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            debuggable true
+            buildConfigField "String" , "APP_ID", "\"103035665\""
+            buildConfigField "String" , "APP_SECRET", "\"0c2e245e869713e25966b963d0f67bda8a710280010b2b557dbde4766c0c5742\""
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String" , "APP_ID", "\"103035665\""
+            buildConfigField "String" , "APP_SECRET", "\"0c2e245e869713e25966b963d0f67bda8a710280010b2b557dbde4766c0c5742\""
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/library_release.kotlin_module'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "androidx.constraintlayout:constraintlayout:2.0.4"
+
+    // Huawei Core
+    implementation 'com.huawei.agconnect:agconnect-core:1.4.2.300'
+
+    // Account Kit
+    implementation 'com.huawei.hms:hwid:5.0.3.301'
+
+    // Analytics Kit
+    implementation 'com.huawei.hms:hianalytics:5.0.5.300'
+
+    // Map Kit
+    implementation 'com.huawei.hms:maps:5.0.3.302'
+
+    // Location Kit
+    implementation 'com.huawei.hms:location:5.0.4.300'
+
+    // Push Kit
+    implementation 'com.huawei.hms:push:5.0.2.300'
+
+    // App Linking
+    implementation 'com.huawei.agconnect:agconnect-applinking:1.4.1.300'
+
+    // Safety Detect Kit
+    implementation 'com.huawei.hms:safetydetect:5.0.3.300'
+
+    // Interstitial Ads Kit
+    implementation 'com.huawei.hms:ads-lite:13.4.33.300'
+
+    // ML Kits
+    // OCR Kit for general card recognition
+    implementation 'com.huawei.hms:ml-computer-vision-ocr:2.0.1.300'
+    implementation 'com.huawei.hms:ml-computer-card-gcr-plugin:2.0.1.301'
+    // ASR
+    implementation 'com.huawei.hms:ml-computer-voice-asr:2.0.3.300'
+    implementation 'com.huawei.hms:ml-computer-voice-asr-plugin:2.0.3.300'
+
+    // Dependency libs
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    // Network libs
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+
+    // Other libs
+    implementation 'com.nabinbhandari.android:permissions:3.8'
+}

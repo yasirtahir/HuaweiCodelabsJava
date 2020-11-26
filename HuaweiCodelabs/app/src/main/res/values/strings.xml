@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="app_name">Code Labs</string>
+    <string name="splash_name">Code Labs \n\nby\n\n YASIR TAHIR</string>
+    <string name="huawei_account_kit">Huawei Account Kit</string>
+    <string name="id_token_signin">ID Token SignIn</string>
+    <string name="authorization_signin">Authorization SignIn</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="account_kit_demo">Account Kit Demo</string>
+    <string name="generate_push_token">Generate Push Token (Push Kit)</string>
+    <string name="send_custom_event">Analytics Kit (Send Event)</string>
+    <string name="permission_request">Please enable location services in order to use all features of the application</string>
+    <string name="app_permissions">The app need these requested permissions in order to work properly. Please note that the application will not work properly until you allow the requested permissions</string>
+    <string name="huawei_location_kit">Huawei Location Kit</string>
+    <string name="request_location_updates">Request Location Updates</string>
+    <string name="remove_location_updates">Remove Location Updates</string>
+    <string name="location_kit_demo">Location Kit Demo</string>
+    <string name="map_kit">Map Kit Demo</string>
+    <string name="deep_linking">Deep Linking</string>
+    <string name="create_app_link">Create App Link</string>
+    <string name="share_long_link">Share Long Link</string>
+    <string name="share_short_link">Share Short Link</string>
+    <string name="long_link">Long Link</string>
+    <string name="short_link">Short Link</string>
+    <string name="applinking_kit">AppLinking Kit</string>
+    <string name="safety_detect">Safety Detect</string>
+    <string name="huawei_safety_detect_kit">Huawei Safety Detect Kit</string>
+    <string name="detect_user">Detect User</string>
+    <string name="image_ad_id">teste9ih9j0rc3</string>
+    <string name="video_ad_id">testb4znbuh3n2</string>
+    <string name="interstitial_ad">Interstitial Ad</string>
+    <string name="ad_kit">Ad Kit</string>
+    <string name="show">Show</string>
+    <string name="ml_kit">ML Kit</string>
+    <string name="asr">Automatic Speech Recognition</string>
+    <string name="general_card_recognition">General Card Recognition</string>
+    <string name="detect_from_video">Detect from Video</string>
+    <string name="detect_from_picture">Detect from Picture</string>
+    <string name="app_details">This app contains sample code of major HMS libraries written in JAVA. \n\nIf you face any difficulties, please write back at <u>yasir.tahir@huawei.com</u></string>
+
+</resources>

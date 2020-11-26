@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/upsdk_margin_l"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtDeepLinking"
+        style="@style/TextViewStyle"
+        android:text="@string/deep_linking"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnCreateAppLink"
+        android:layout_below="@+id/txtDeepLinking"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/create_app_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtLongLink"
+        style="@style/TextViewStyle"
+        android:text="@string/long_link"
+        android:layout_below="@+id/btnCreateAppLink"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnShareLongLink"
+        android:layout_below="@+id/txtLongLink"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/share_long_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtShortLink"
+        style="@style/TextViewStyle"
+        android:text="@string/short_link"
+        android:layout_below="@+id/btnShareLongLink"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnShareShortLink"
+        android:layout_below="@+id/txtShortLink"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/share_short_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
