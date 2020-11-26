@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this project we integrated frequently used Huawei Kits which can be run directly on any HMS enabled devices.
+In this project, we integrated frequently used Huawei Kits which can be run directly on any HMS enabled devices.
 
   
 ## Pre-Requisites
