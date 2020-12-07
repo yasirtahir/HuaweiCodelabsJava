@@ -77,7 +77,7 @@
         <!-- Applying for auto init the push token -->
 <!--                <meta-data-->
 <!--                    android:name="push_kit_auto_init_enabled"-->
-<!--                    android:value="true" />-->
+<!--                    android:value="false" />-->
 
     </application>
 
