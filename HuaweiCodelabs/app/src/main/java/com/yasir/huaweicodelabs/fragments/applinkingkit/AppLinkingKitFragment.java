@@ -13,7 +13,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.huawei.agconnect.applinking.AGConnectAppLinking;
 import com.huawei.agconnect.applinking.AppLinking;
 import com.huawei.agconnect.applinking.ShortAppLinking;
 import com.yasir.huaweicodelabs.R;
