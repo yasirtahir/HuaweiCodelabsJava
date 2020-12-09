@@ -84,9 +84,17 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/btnScanKit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnMlKit"
+            android:layout_margin="@dimen/field_padding_left"
+            android:text="@string/scan_kit" />
+
+        <Button
             android:id="@+id/btnGeneratePushToken"
             android:text="@string/generate_push_token"
-            android:layout_below="@+id/btnMlKit"
+            android:layout_below="@+id/btnScanKit"
             android:layout_margin="@dimen/field_padding_left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

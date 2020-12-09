@@ -31,6 +31,7 @@ import com.yasir.huaweicodelabs.fragments.locationkit.LocationKitFragment;
 import com.yasir.huaweicodelabs.fragments.mapkit.MapKitFragment;
 import com.yasir.huaweicodelabs.fragments.mlkit.MlKitFragment;
 import com.yasir.huaweicodelabs.fragments.safetydetect.SafetyDetectFragment;
+import com.yasir.huaweicodelabs.fragments.scankit.ScanKitFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -63,6 +64,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     @BindView(R.id.btnMlKit)
     Button btnMlKit;
+
+    @BindView(R.id.btnScanKit)
+    Button btnScanKit;
 
     @BindView(R.id.txtPushToken)
     TextView txtPushToken;
@@ -100,6 +104,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         btnSafetyDetect.setOnClickListener(this);
         btnAds.setOnClickListener(this);
         btnMlKit.setOnClickListener(this);
+        btnScanKit.setOnClickListener(this);
     }
 
     @Override
@@ -152,6 +157,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             case R.id.btnMlKit:
                 sendCustomEvent("MLKitButton");
                 getMainActivity().addFragment(MlKitFragment.newInstance(), MlKitFragment.class.getSimpleName());
+                break;
+            case R.id.btnScanKit:
+                sendCustomEvent("ScanKitButton");
+                getMainActivity().addFragment(ScanKitFragment.newInstance(), ScanKitFragment.class.getSimpleName());
                 break;
         }
     }

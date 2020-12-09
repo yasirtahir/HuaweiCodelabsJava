@@ -1,5 +1,7 @@
 <resources>
 
+    <string name="quit_msg">Are you sure, you want to close the application?</string>
+    <string name="quit_title">Confirmation</string>
     <string name="app_name">Code Labs</string>
     <string name="splash_name">Code Labs \n\nby\n\n YASIR TAHIR</string>
     <string name="huawei_account_kit">Huawei Account Kit</string>
@@ -32,6 +34,9 @@
     <string name="ad_kit">Ad Kit</string>
     <string name="show">Show</string>
     <string name="ml_kit">ML Kit</string>
+    <string name="default_view">Default View</string>
+    <string name="custom_view">Custom View</string>
+    <string name="scan_kit">Scan Kit</string>
     <string name="asr">Automatic Speech Recognition</string>
     <string name="general_card_recognition">General Card Recognition</string>
     <string name="detect_from_video">Detect from Video</string>

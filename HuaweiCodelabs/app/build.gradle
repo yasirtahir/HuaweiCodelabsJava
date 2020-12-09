@@ -91,6 +91,9 @@ dependencies {
     // Interstitial Ads Kit
     implementation 'com.huawei.hms:ads-lite:13.4.33.300'
 
+    // Scan Kit
+    implementation 'com.huawei.hms:scan:1.2.5.300'
+
     // ML Kits
     // OCR Kit for general card recognition
     implementation 'com.huawei.hms:ml-computer-vision-ocr:2.0.1.300'

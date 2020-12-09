@@ -2,10 +2,11 @@ package com.yasir.huaweicodelabs.activities;
 
 import android.Manifest;
 import android.content.Context;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -14,6 +15,7 @@ import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
 import com.yasir.huaweicodelabs.R;
 import com.yasir.huaweicodelabs.fragments.HomeFragment;
+import com.yasir.huaweicodelabs.fragments.scankit.ScanKitFragment;
 import com.yasir.huaweicodelabs.repos.AlertsRepo;
 import com.yasir.huaweicodelabs.repos.CustomTitleBarRepo;
 import com.yasir.huaweicodelabs.repos.PermissionCallback;
@@ -22,6 +24,8 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static com.yasir.huaweicodelabs.fragments.scankit.ScanKitFragment.REQUEST_CODE_SCAN_ONE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -85,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         } else {
-            String[] permissions = { Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.ACCESS_WIFI_STATE,
+            String[] permissions = {Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.ACCESS_WIFI_STATE,
                     Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION,
                     Manifest.permission.ACCESS_BACKGROUND_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
             Permissions.check(this, permissions, getResources().getString(R.string.permission_request), null, new PermissionHandler() {
@@ -112,12 +116,19 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
             super.onBackPressed();
         } else {
-            AlertsRepo.createQuitDialog(this, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    finish();
-                }
-            }, "Are you sure, you want to close the application?", "Confirmation").show();
+            AlertsRepo.createQuitDialog(this, (dialog, which) -> finish(),
+                    getResources().getString(R.string.quit_msg), getResources().getString(R.string.quit_title)).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_SCAN_ONE) {
+            Fragment fragment = getSupportFragmentManager().findFragmentByTag(ScanKitFragment.class.getSimpleName());
+            if (fragment != null) {
+                fragment.onActivityResult(requestCode, resultCode, data);
+            }
         }
     }
 }
