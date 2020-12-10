@@ -113,4 +113,7 @@ dependencies {
 
     // Other libs
     implementation 'com.nabinbhandari.android:permissions:3.8'
+
+    // Google Dependency for GMS check
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
 }
