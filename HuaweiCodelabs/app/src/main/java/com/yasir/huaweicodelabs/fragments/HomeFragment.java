@@ -24,9 +24,11 @@ import com.huawei.hms.common.ApiException;
 import com.yasir.huaweicodelabs.R;
 import com.yasir.huaweicodelabs.Utilities.AppConstant;
 import com.yasir.huaweicodelabs.Utilities.AppLog;
+import com.yasir.huaweicodelabs.Utilities.TvUtil;
 import com.yasir.huaweicodelabs.fragments.accountkit.AccountKitFragment;
 import com.yasir.huaweicodelabs.fragments.ads.AdsFragment;
 import com.yasir.huaweicodelabs.fragments.applinkingkit.AppLinkingKitFragment;
+import com.yasir.huaweicodelabs.fragments.iap.IAPFragment;
 import com.yasir.huaweicodelabs.fragments.locationkit.LocationKitFragment;
 import com.yasir.huaweicodelabs.fragments.mapkit.MapKitFragment;
 import com.yasir.huaweicodelabs.fragments.mlkit.MlKitFragment;
@@ -68,6 +70,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     @BindView(R.id.btnScanKit)
     Button btnScanKit;
 
+    @BindView(R.id.btnIAP)
+    Button btnIAP;
+
     @BindView(R.id.txtPushToken)
     TextView txtPushToken;
 
@@ -94,6 +99,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
         getMainActivity().setHeading("Home");
 
+        setUIForTV();
+
         // Setting listeners
         btnAccountKit.setOnClickListener(this);
         btnGeneratePushToken.setOnClickListener(this);
@@ -105,6 +112,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         btnAds.setOnClickListener(this);
         btnMlKit.setOnClickListener(this);
         btnScanKit.setOnClickListener(this);
+        btnIAP.setOnClickListener(this);
     }
 
     @Override
@@ -162,6 +170,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 sendCustomEvent("ScanKitButton");
                 getMainActivity().addFragment(ScanKitFragment.newInstance(), ScanKitFragment.class.getSimpleName());
                 break;
+            case R.id.btnIAP:
+                sendCustomEvent("IAPKitButton");
+                getMainActivity().addFragment(IAPFragment.newInstance(), IAPFragment.class.getSimpleName());
+                break;
         }
     }
 
@@ -180,7 +192,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         getMainActivity().unregisterReceiver(pushTokenReceiver);
     }
 
-    private void generatePushToken(){
+    private void generatePushToken() {
         new Thread() {
             @Override
             public void run() {
@@ -197,13 +209,13 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         }.start();
     }
 
-    private void showPushToken(String token){
-        if(!TextUtils.isEmpty(token)) {
+    private void showPushToken(String token) {
+        if (!TextUtils.isEmpty(token)) {
             getMainActivity().runOnUiThread(() -> txtPushToken.setText(token));
         }
     }
 
-    private void sendCustomEvent(String tag){
+    private void sendCustomEvent(String tag) {
         HiAnalyticsInstance instance = HiAnalytics.getInstance(getMainActivity());
 
         Bundle bundle = new Bundle();
@@ -214,5 +226,21 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         String showMessage = tag + " event has been sent to Analytics Console";
 
         Toast.makeText(getMainActivity(), showMessage, Toast.LENGTH_SHORT).show();
+    }
+
+    private void setUIForTV() {
+        if (TvUtil.isDirectToTV(getMainActivity())) {
+            btnAccountKit.setVisibility(View.VISIBLE);
+            btnIAP.setVisibility(View.VISIBLE);
+            btnGeneratePushToken.setVisibility(View.GONE);
+            btnSendCustomEvent.setVisibility(View.GONE);
+            btnLocationKit.setVisibility(View.GONE);
+            btnMapKit.setVisibility(View.GONE);
+            btnAppLinking.setVisibility(View.GONE);
+            btnSafetyDetect.setVisibility(View.GONE);
+            btnAds.setVisibility(View.GONE);
+            btnMlKit.setVisibility(View.GONE);
+            btnScanKit.setVisibility(View.GONE);
+        }
     }
 }

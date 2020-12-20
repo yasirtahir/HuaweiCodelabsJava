@@ -4,15 +4,13 @@
 		"url":"connect-dra.hispace.hicloud.com"
 	},
 	"client":{
-		"appType":"1",
-		"cp_id":"70971000000036118",
-		"product_id":"736430079244739695",
-		"client_id":"516656952189650112",
-		"client_secret":"F8AA8AE444D1BE7EE9BE626777396E00F1F344C1078A9386B68DC2FDF9CFD43D",
-		"project_id":"736430079244739695",
-		"app_id":"103480375",
-		"api_key":"CgB6e3x9HmW118t2nInOQxyDxsaKoj9PdKL9AaGEK8bqaopDPdG+DnYAZGNw38e75kgV9guMiCQM2YinpvSiR9UL",
-		"package_name":"com.yasir.samplejavaapp.huawei"
+		"cp_id":"2640966000003128487",
+		"product_id":"736430079244663976",
+		"client_id":"471617525453423680",
+		"client_secret":"96EA690CD9FE164A197FB1ABD25D64B79D9B6D0859449631052652528DE38732",
+		"app_id":"103035665",
+		"package_name":"com.yasir.huaweicodelabs",
+		"api_key":"CgB6e3x95Qpt4fbjKRPXb0TEz3L3lBj6SuRkQ1HVDl462WVaWGSPOUS0w+VG9PrJ395o3IN58fGF/X4jPWbvhVKS"
 	},
 	"service":{
 		"analytics":{

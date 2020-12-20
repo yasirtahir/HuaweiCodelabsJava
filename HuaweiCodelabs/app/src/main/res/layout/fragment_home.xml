@@ -92,9 +92,17 @@
             android:text="@string/scan_kit" />
 
         <Button
+            android:id="@+id/btnIAP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnScanKit"
+            android:layout_margin="@dimen/field_padding_left"
+            android:text="@string/iap_kit" />
+
+        <Button
             android:id="@+id/btnGeneratePushToken"
             android:text="@string/generate_push_token"
-            android:layout_below="@+id/btnScanKit"
+            android:layout_below="@+id/btnIAP"
             android:layout_margin="@dimen/field_padding_left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
