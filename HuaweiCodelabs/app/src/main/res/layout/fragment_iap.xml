@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/upsdk_margin_l"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnProductOne"
+        android:text="@string/product_one"
+        android:layout_margin="@dimen/field_padding_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtProductOne"
+        style="@style/TextViewStyle"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_large"
+        android:layout_below="@+id/btnProductOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnProductTwo"
+        android:text="@string/product_two"
+        android:layout_below="@+id/txtProductOne"
+        android:layout_margin="@dimen/field_padding_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtProductTwo"
+        style="@style/TextViewStyle"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_large"
+        android:layout_below="@+id/btnProductTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
