@@ -117,7 +117,4 @@ public class AdsFragment extends BaseFragment {
             Toast.makeText(getMainActivity(), "Interstitial Ad did not load", Toast.LENGTH_SHORT).show();
         }
     }
-
-
-
 }

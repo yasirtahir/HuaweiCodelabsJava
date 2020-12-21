@@ -7,11 +7,12 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.yasir.huaweicodelabs"
+        applicationId "com.yasir.samplejavaapp.huawei"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 100
         versionName "1.0.0"
+        multiDexEnabled true
         resConfigs "en" // Limiting the resource files to English only
         ndk.abiFilters 'arm64-v8a', 'x86_64' // Removing unused binary files of 32-bit arch.
     }
@@ -31,16 +32,16 @@ android {
         debug {
             signingConfig signingConfigs.release
             debuggable true
-            buildConfigField "String" , "APP_ID", "\"103035665\""
-            buildConfigField "String" , "APP_SECRET", "\"0c2e245e869713e25966b963d0f67bda8a710280010b2b557dbde4766c0c5742\""
+            buildConfigField "String" , "APP_ID", "\"103480375\""
+            buildConfigField "String" , "APP_SECRET", "\"3a3a3b14ca355a37a74a50921089515591c573b5ebc43bf325b2d1a988ba583e\""
         }
         release {
             signingConfig signingConfigs.release
             minifyEnabled false
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String" , "APP_ID", "\"103035665\""
-            buildConfigField "String" , "APP_SECRET", "\"0c2e245e869713e25966b963d0f67bda8a710280010b2b557dbde4766c0c5742\""
+            buildConfigField "String" , "APP_ID", "\"103480375\""
+            buildConfigField "String" , "APP_SECRET", "\"3a3a3b14ca355a37a74a50921089515591c573b5ebc43bf325b2d1a988ba583e\""
         }
     }
 
@@ -59,7 +60,12 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation "androidx.constraintlayout:constraintlayout:2.0.4"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // TV Libs
+    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'androidx.leanback:leanback-preference:1.0.0'
 
     // Huawei Core
     implementation 'com.huawei.agconnect:agconnect-core:1.4.2.300'
@@ -69,6 +75,9 @@ dependencies {
 
     // Analytics Kit
     implementation 'com.huawei.hms:hianalytics:5.0.5.300'
+
+    // IAP Kit
+    implementation 'com.huawei.hms:iap:4.0.4.301'
 
     // Crash Kit
     implementation 'com.huawei.agconnect:agconnect-crash:1.4.2.300'

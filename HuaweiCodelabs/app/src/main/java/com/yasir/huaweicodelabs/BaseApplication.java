@@ -1,11 +1,11 @@
 package com.yasir.huaweicodelabs;
 
-import android.app.Application;
+import androidx.multidex.MultiDexApplication;
 
 import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.analytics.HiAnalyticsTools;
 
-public class BaseApplication extends Application {
+public class BaseApplication extends MultiDexApplication {
 
     @Override
     public void onCreate() {

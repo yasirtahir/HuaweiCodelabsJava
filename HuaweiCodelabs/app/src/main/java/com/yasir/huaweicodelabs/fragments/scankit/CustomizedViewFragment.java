@@ -1,5 +1,7 @@
 package com.yasir.huaweicodelabs.fragments.scankit;
 
+import android.Manifest;
+import android.content.Context;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -16,9 +18,15 @@ import androidx.annotation.Nullable;
 import com.huawei.hms.hmsscankit.OnResultCallback;
 import com.huawei.hms.hmsscankit.RemoteView;
 import com.huawei.hms.ml.scan.HmsScan;
+import com.nabinbhandari.android.permissions.PermissionHandler;
+import com.nabinbhandari.android.permissions.Permissions;
 import com.yasir.huaweicodelabs.R;
 import com.yasir.huaweicodelabs.Utilities.AppLog;
+import com.yasir.huaweicodelabs.activities.MainActivity;
 import com.yasir.huaweicodelabs.fragments.BaseFragment;
+import com.yasir.huaweicodelabs.repos.AlertsRepo;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,6 +49,8 @@ public class CustomizedViewFragment extends BaseFragment {
 
         getMainActivity().setHeading("Customized View");
 
+        checkPermissions();
+
         initView(savedInstanceState);
     }
 
@@ -55,6 +65,21 @@ public class CustomizedViewFragment extends BaseFragment {
         ButterKnife.bind(this, rootView);
 
         return rootView;
+    }
+
+    private void checkPermissions(){
+        String[] permissions = {Manifest.permission.CAMERA};
+        Permissions.check(getMainActivity(), permissions, getResources().getString(R.string.permission_request), null, new PermissionHandler() {
+            @Override
+            public void onGranted() {
+
+            }
+
+            @Override
+            public void onDenied(Context context, ArrayList<String> deniedPermissions) {
+
+            }
+        });
     }
 
     private void initView(Bundle savedInstanceState){

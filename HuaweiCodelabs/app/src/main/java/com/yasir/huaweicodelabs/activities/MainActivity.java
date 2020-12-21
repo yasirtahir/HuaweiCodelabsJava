@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.nabinbhandari.android.permissions.PermissionHandler;
 import com.nabinbhandari.android.permissions.Permissions;
 import com.yasir.huaweicodelabs.R;
+import com.yasir.huaweicodelabs.Utilities.TvUtil;
 import com.yasir.huaweicodelabs.fragments.HomeFragment;
 import com.yasir.huaweicodelabs.fragments.scankit.ScanKitFragment;
 import com.yasir.huaweicodelabs.repos.AlertsRepo;
@@ -44,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
             initFragment();
         }
 
-        checkPermissions(null);
+        if (!TvUtil.isDirectToTV(this)) {
+            checkPermissions(null);
+        }
     }
 
     private void initFragment() {
@@ -60,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
     public void setHeading(String title) {
         mainHeader.hideButtons();
         mainHeader.setHeading(title);
+
+        if (!title.equalsIgnoreCase("Home")) {
+            mainHeader.showLeftButton(R.drawable.ic_back, v -> onBackPressed());
+        }
     }
 
     public void hideTitleButtons() {

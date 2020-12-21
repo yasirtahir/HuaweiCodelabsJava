@@ -44,8 +44,8 @@ public class AppLinkingKitFragment extends BaseFragment implements View.OnClickL
 
     private View rootView;
     private String longLink, shortLink = "";
-    private static final String DOMAIN_URI_PREFIX = "https://yasircodelabs.dra.agconnect.link";
-    private static final String DEEP_LINK = "https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides";
+    private static final String DOMAIN_URI_PREFIX = "https://yasirsamplejavaapp.dra.agconnect.link";
+    private static final String DEEP_LINK = "https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides";
 
     public static AppLinkingKitFragment newInstance() {
         return new AppLinkingKitFragment();

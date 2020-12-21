@@ -29,4 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/txtResults"
+        style="@style/TextViewStyle"
+        android:gravity="start"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:layout_below="@+id/btnPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
