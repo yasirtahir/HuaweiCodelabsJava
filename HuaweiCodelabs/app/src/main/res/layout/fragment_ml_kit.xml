@@ -21,4 +21,13 @@
         android:layout_height="wrap_content" />
 
 
+    <Button
+        android:id="@+id/btnFaceDetect"
+        android:layout_below="@+id/btnGeneralCard"
+        android:layout_marginTop="@dimen/upsdk_margin_l"
+        android:text="@string/face_detect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 </RelativeLayout>

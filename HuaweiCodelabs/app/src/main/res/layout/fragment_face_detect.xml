@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/cameraView"
+        app:cameraFacing="front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yasir.huaweicodelabs.fragments.mlkit.facemask.CameraOverlayView
+            android:id="@+id/overlayView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.otaliastudios.cameraview.CameraView>
+
+    <ImageButton
+        android:id="@+id/btnProcessor"
+        android:src="@drawable/tflite"
+        android:scaleType="centerInside"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/headerHeight"
+        android:contentDescription="@string/switch_processor" />
+
+    <ImageView
+        android:id="@+id/imgChange"
+        android:layout_alignBottom="@+id/btnProcessor"
+        android:padding="@dimen/field_padding_right"
+        android:layout_alignEnd="@+id/btnProcessor"
+        android:src="@drawable/ic_change_processor"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/switch_processor"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSwitchCamera"
+        android:src="@drawable/ic_switch_camera"
+        android:scaleType="centerInside"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/float_btn_margin"
+        android:layout_width="@dimen/headerHeight"
+        android:layout_height="@dimen/headerHeight"
+        android:contentDescription="@string/switch_camera" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnToggleSound"
+        android:src="@drawable/ic_img_sound_disable"
+        android:scaleType="centerInside"
+        android:layout_above="@+id/btnSwitchCamera"
+        android:layout_alignStart="@+id/btnSwitchCamera"
+        android:layout_alignEnd="@+id/btnSwitchCamera"
+        android:layout_width="@dimen/headerHeight"
+        android:layout_height="@dimen/headerHeight"
+        android:contentDescription="@string/switch_camera" />
+
+</RelativeLayout>

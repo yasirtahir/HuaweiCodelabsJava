@@ -38,13 +38,18 @@
     <string name="custom_view">Custom View</string>
     <string name="scan_kit">Scan Kit</string>
     <string name="iap_kit">IAP Kit</string>
-    <string name="tv_home">This is TV home launched directly through Manifest</string>
+    <string name="tv_home">This is Leanback Activity for TV</string>
     <string name="asr">Automatic Speech Recognition</string>
     <string name="general_card_recognition">General Card Recognition</string>
+    <string name="face_detect">Face Mask Detection</string>
     <string name="detect_from_video">Detect from Video</string>
     <string name="detect_from_picture">Detect from Picture</string>
     <string name="product_one">Product One</string>
     <string name="product_two">Product Two</string>
+    <string name="current_location">Current Location:</string>
+    <string name="switch_camera">Switch Camera</string>
+    <string name="switch_sound">Switch Sound</string>
+    <string name="switch_processor">Switch Processor</string>
     <string name="app_details">This app contains sample code of major HMS libraries written in JAVA. \n\nIf you face any difficulties, please write back at <u>yasir.tahir@huawei.com</u></string>
 
 </resources>

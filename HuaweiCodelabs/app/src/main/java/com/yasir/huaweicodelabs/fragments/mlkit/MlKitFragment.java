@@ -2,7 +2,6 @@ package com.yasir.huaweicodelabs.fragments.mlkit;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +30,9 @@ public class MlKitFragment extends BaseFragment implements View.OnClickListener 
     @BindView(R.id.btnASR)
     Button btnASR;
 
+    @BindView(R.id.btnFaceDetect)
+    Button btnFaceDetect;
+
     private View rootView;
     private static final int ML_ASR_CAPTURE_CODE = 2002;
 
@@ -50,6 +52,7 @@ public class MlKitFragment extends BaseFragment implements View.OnClickListener 
 
         btnGeneralCard.setOnClickListener(this);
         btnASR.setOnClickListener(this);
+        btnFaceDetect.setOnClickListener(this);
     }
 
     @Override
@@ -73,6 +76,9 @@ public class MlKitFragment extends BaseFragment implements View.OnClickListener 
                 break;
             case R.id.btnASR:
                 startListeningAudio();
+                break;
+            case R.id.btnFaceDetect:
+                getMainActivity().addFragment(FaceMaskDetectFragment.newInstance(), FaceMaskDetectFragment.class.getSimpleName());
                 break;
         }
     }

@@ -53,6 +53,10 @@ android {
     packagingOptions {
         exclude 'META-INF/library_release.kotlin_module'
     }
+
+    aaptOptions {
+        noCompress "tflite", "ms" // This will prevent from compressing tensorflow and mindspore model files
+    }
 }
 
 dependencies {
@@ -62,6 +66,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.material:material:1.2.1'
 
     // TV Libs
     implementation 'androidx.leanback:leanback:1.0.0'
@@ -110,18 +115,29 @@ dependencies {
     // ASR
     implementation 'com.huawei.hms:ml-computer-voice-asr:2.0.3.300'
     implementation 'com.huawei.hms:ml-computer-voice-asr-plugin:2.0.3.300'
+    // Face detection
+    implementation 'com.huawei.hms:ml-computer-vision-face:2.0.5.300'
+    // Mind Spore
+    implementation 'mindspore:mindspore-lite:5.0.5.300'
+    implementation 'com.huawei.hms:ml-computer-model-executor:2.1.0.300'
 
     // Dependency libs
-    implementation 'com.jakewharton:butterknife:10.2.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
     // Network libs
     implementation 'com.squareup.retrofit:retrofit:1.9.0'
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
 
     // Other libs
     implementation 'com.nabinbhandari.android:permissions:3.8'
+    api 'com.otaliastudios:cameraview:2.6.2' // CameraView for Face Detection
+
+    // Tensor Flow
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:0.0.0-nightly'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.0.0-nightly'
 
     // Google Dependency for GMS check
     implementation 'com.google.android.gms:play-services-auth:19.0.0'

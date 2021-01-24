@@ -7,6 +7,7 @@
     <dimen name="text_size_splash">25sp</dimen>
     <dimen name="field_padding_left">10dp</dimen>
     <dimen name="field_padding_right">10dp</dimen>
+    <dimen name="float_btn_margin">25dp</dimen>
     <dimen name="headerHeight">55dp</dimen>
 
 </resources>

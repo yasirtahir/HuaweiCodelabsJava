@@ -44,21 +44,29 @@ https://medium.com/huawei-developers/android-integrating-your-apps-with-huawei-h
 ### Huawei App Linking Kit Official Documentation:
 [https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-applinking-introduction](https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agc-applinking-introduction)
 
-
 ### Huawei Safety Detect Kit Official Documentation:
 [https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/introduction-0000001050156325](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/introduction-0000001050156325)
-
 
 ### Huawei Ads Kit Official Documentation:
 [https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-introduction-0000001050064960](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/publisher-service-introduction-0000001050064960)
 
+### Huawei General Card Recognition ML Kit Official Documentation:
+[https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/general-card-recognition-0000001050040073-V5](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/general-card-recognition-0000001050040073-V5)
 
-### Huawei ML Kit Official Documentation:
+### Huawei ASR ML Kit Official Documentation:
 [https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/ml-asr-0000001050066212](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/ml-asr-0000001050066212)
+
+### Huawei Face Detect ML Kit Official Documentation:
+[https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/face-detection-0000001050038170-V5](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/face-detection-0000001050038170-V5)
 
 ### Huawei Site Kit Official Documentation:
 [https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/android-sdk-introduction-0000001050158571-V5](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/android-sdk-introduction-0000001050158571-V5)
 
-
 ### Huawei Push Kit Official Documentation:
 [https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/service-introduction-0000001050040060](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/service-introduction-0000001050040060)
+
+### Huawei Scan Kit Official Documentation:
+[https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/android-dev-process-0000001050043953-V5](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/android-dev-process-0000001050043953-V5)
+
+### Huawei IAP Kit Official Documentation:
+[https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/introduction-0000001050033062-V5](https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides-V5/introduction-0000001050033062-V5)
