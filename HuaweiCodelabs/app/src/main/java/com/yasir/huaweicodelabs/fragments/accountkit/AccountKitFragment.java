@@ -22,7 +22,6 @@ import com.huawei.hms.support.hwid.result.AuthHuaweiId;
 import com.huawei.hms.support.hwid.service.HuaweiIdAuthService;
 import com.yasir.huaweicodelabs.BuildConfig;
 import com.yasir.huaweicodelabs.R;
-import com.yasir.huaweicodelabs.Utilities.AppConstant;
 import com.yasir.huaweicodelabs.Utilities.AppLog;
 import com.yasir.huaweicodelabs.fragments.BaseFragment;
 import com.yasir.huaweicodelabs.models.TokenModel;

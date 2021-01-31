@@ -97,8 +97,40 @@ public class AppLinkingKitFragment extends BaseFragment implements View.OnClickL
     }
 
     private void createAppLinking() {
+
+        String bundleID = "com.yasir.sampleiosapp.huawei";
+        String theCampaignToken = "Campaign Token";
+        String theProviderToken = "Provider Token";
+        String theMedium = "Medium";
+        String theCampaign = "Campaign";
+        String theSource = "Source";
+
         AppLinking.Builder builder = new AppLinking.Builder().setUriPrefix(DOMAIN_URI_PREFIX)
                 .setDeepLink(Uri.parse(DEEP_LINK));
+
+        // Setting Android Link Info
+        // In some cases, we have to use agckit instead of https
+        builder.setAndroidLinkInfo(AppLinking.AndroidLinkInfo.newBuilder()
+                .setAndroidDeepLink(DEEP_LINK).build());
+
+        // Setting iOS Link Info
+        // In some cases, we have to use agckit instead of https
+        builder.setIOSLinkInfo(AppLinking.IOSLinkInfo.newBuilder().setBundleId(bundleID)
+                .setIOSDeepLink(DEEP_LINK)
+                .setITunesConnectCampaignInfo(AppLinking.ITunesConnectCampaignInfo.newBuilder()
+                        .setProviderToken(theProviderToken)
+                        .setCampaignToken(theCampaignToken).build()).build());
+
+        // Setting Social Card Info
+        builder.setSocialCardInfo(AppLinking.SocialCardInfo.newBuilder().setTitle("Product")
+                .setDescription("Description").setImageUrl("").build());
+
+        // Setting Campaign Info
+        builder.setCampaignInfo(AppLinking.CampaignInfo.newBuilder().setName(theCampaign)
+                .setMedium(theMedium).setSource(theSource).build());
+
+        // Setting Preview Type
+        builder.setPreviewType(AppLinking.LinkingPreviewType.AppInfo);
 
         // Setting the generated long link on the Long Text View
         longLink = builder.buildAppLinking().getUri().toString();

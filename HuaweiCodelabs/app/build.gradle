@@ -73,7 +73,7 @@ dependencies {
     implementation 'androidx.leanback:leanback-preference:1.0.0'
 
     // Huawei Core
-    implementation 'com.huawei.agconnect:agconnect-core:1.4.2.300'
+    implementation 'com.huawei.agconnect:agconnect-core:1.4.2.301'
 
     // Account Kit
     implementation 'com.huawei.hms:hwid:5.0.3.301'
@@ -85,7 +85,7 @@ dependencies {
     implementation 'com.huawei.hms:iap:4.0.4.301'
 
     // Crash Kit
-    implementation 'com.huawei.agconnect:agconnect-crash:1.4.2.300'
+    implementation 'com.huawei.agconnect:agconnect-crash:1.4.2.301'
 
     // Map Kit
     implementation 'com.huawei.hms:maps:5.0.3.302'
@@ -97,7 +97,7 @@ dependencies {
     implementation 'com.huawei.hms:push:5.0.2.300'
 
     // App Linking
-    implementation 'com.huawei.agconnect:agconnect-applinking:1.4.2.300'
+    implementation 'com.huawei.agconnect:agconnect-applinking:1.4.2.301'
 
     // Safety Detect Kit
     implementation 'com.huawei.hms:safetydetect:5.0.3.300'
